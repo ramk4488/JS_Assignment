@@ -26,3 +26,23 @@ addItem.addEventListener('click', function(){
 function removeTodo(counter){
     const findElem = document.getElementById(counter).remove();
 }
+
+
+const chagneColor = document.getElementById('chagneColor');
+chagneColor.addEventListener('click', function(){
+    const allPElem = document.querySelectorAll('div#p-tag-color-change p');
+    console.log(allPElem);
+    for(let i=0; i<allPElem.length; i++){
+        allPElem[i].style.background = "red"
+    }
+})
+
+const removePTag = document.getElementById('removePTag');
+removePTag.addEventListener('click', function(){
+    console.log("removing all p tags")
+    const allPTags = document.querySelectorAll('div#p-tag-color-change p');
+    for (let i = 0; i < allPTags.length; i++) {
+        allPTags[i].remove();
+        
+    }
+})
