@@ -16,7 +16,8 @@ addItem.addEventListener('click', function(){
     const toDoData = prompt("Enter ToDo Item into List");
     if(toDoData){
         const createLiElem = document.createElement('li');
-        createLiElem.innerHTML = '<li id="'+counter+'">' +toDoData+ ' <button onclick="removeTodo('+counter+')">x</button></li>';
+        createLiElem.id = counter;
+        createLiElem.innerHTML = '<span>' +toDoData+ ' <button onclick="removeTodo('+counter+')">x</button></span>';
         ulToDo.append(createLiElem);
         counter++;
     }
