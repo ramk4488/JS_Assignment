@@ -28,14 +28,14 @@ async function fetchDataAndShowResult(searcData = null) {
     for (let i = 0; i < resposeObj.length; i++) {
         console.log(searcData)
         if(searcData != null){
-            if(resposeObj[i].title.includes(searcData)){
+            if(resposeObj[i].title.toLowerCase().includes(searcData.toLowerCase())){
                 const productTitleDiv = document.createElement('div');
                 productTitleDiv.innerHTML = '<span><img style="height:50px; width:50px;" src="'+resposeObj[i].image+'" alt=""></span><span>'+resposeObj[i].title+'</span>';
                 parentDiv.append(productTitleDiv)
             }
         }else{
             const productTitleDiv = document.createElement('div');
-            productTitleDiv.innerHTML = '<span><img style="height:50px; width:50px;" src="'+resposeObj[i].image+'" alt=""></span><span>'+resposeObj[i].title+'</span>';
+            productTitleDiv.innerHTML = '<span><img style="height:50px; width:50px;" src="'+resposeObj[i].image+'" alt=""></span><span class="product-title">'+resposeObj[i].title+'</span>';
             parentDiv.appendChild(productTitleDiv)
 
         }
