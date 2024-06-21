@@ -6,20 +6,53 @@
     <title>Document</title>
 </head>
 <style>
+    #container {
+        width: 100%;
+        display: inline-flex;
+    }
     #search{
         width: 50%;
         height: 20px;
         margin-bottom: 20px;
     }
-    #show-result div{
+    #show-result div, #favProducts div{
         border: 1px solid greenyellow;
+    }
+    .row{
+        width: 50%;
+    }
+    div span {
+        display: inline-block;
+    }
+    .add-to-fav{
+        width: 20%;
+    }
+    .remove-to-fav{
+        width: 20%;
+    }
+    .prod-img{
+        width: 20%;
+    }
+    .product-title{
+        width: 60%;
+    }
+    .fav-h1{
+        text-align: center;
     }
 </style>
 <body>
-    <div id="main">
-        <input type="text" id="search" placeholder="Enter Product Title to Search from API">
+    <div id="container">
+        <div class="row">
+            <div id="main">
+                <input type="text" id="search" placeholder="Enter Product Title to Search from API">
+            </div>
+            <div id="show-result"></div>
+        </div>
+        <div class="row">
+            <h1 class="fav-h1">Favorite Product List</h1>
+            <div id="favProducts"></div>
+        </div>
     </div>
-    <div id="show-result"></div>
 </body>
 </html>
 <script src="./main.js"></script>
