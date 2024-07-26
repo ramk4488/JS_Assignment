@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Day 1</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  console.log("1. Code started");
+  var a = 10;
+  let b = 20;
+  const c = "Dev";
+
+  const promise = () =>
+    new Promise((reply, reject) => reply({ msg: "2. Promise is done" }));
+
+  setTimeout(() => {
+    console.log("3. Inside 3000 setTimeOut");
+  }, 3000);
+
+  setTimeout(() => {
+    console.log("4. Inside 0 setTimeOut");
+  }, 0);
+
+  function tryMe() {
+    console.log("5. Inside Try me");
+  }
+
+  for (let i = 0; i < 5; i++) {
+    console.log("6. I :", i);
+  }
+
+  promise()
+    .then((data) => {
+      console.log("7. Data: ", data);
+      tryMe();
+    })
+    .catch((err) => {
+      console.log("7. Err: ", err);
+    });
+
+  
+  console.log("8. Code End");
+</script>
+
+1
+6
+5
+8
+7
+2
+4
+3

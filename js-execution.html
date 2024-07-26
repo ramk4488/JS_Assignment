@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Functions</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let s = 50;
+  const b = 20;
+
+  function parent() {
+    console.log("@AJ Inside Parent ");
+    function children() {
+      console.log("Inside Children");
+      function innerChildren() {
+        console.log("Inside innerChildren");
+      }
+
+      innerChildren();
+    }
+    children();
+    console.log("@AJ Inside parent out");
+  }
+
+  console.log("Calling Parent started");
+  parent();
+  console.log("Calling Parent done");
+</script>

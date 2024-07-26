@@ -17,12 +17,16 @@
 //     console.log(obj);
 //    });
 
-
-async function fetchDataAndShowResult(searcData = null) {
+let resposeObj;
+async function fetchDataAndShowResult() {
     // localStorage.removeItem('fav-product-id');
-    let resposeObj;
     const res = await fetch('https://dummyjson.com/products');
     resposeObj = await res.json();
+    showData();
+    
+}
+fetchDataAndShowResult()
+function showData(searcData = null){
     const parentDiv = document.getElementById('show-result');
     const favProducts = document.getElementById('favProducts');
     console.log(resposeObj.products)
@@ -58,11 +62,10 @@ async function fetchDataAndShowResult(searcData = null) {
         
     }
 }
-fetchDataAndShowResult()
 const searchField = document.getElementById('search');
 searchField.addEventListener('keyup', function(data){
     searcData = searchField.value;
-    fetchDataAndShowResult(searcData)
+    showData(searcData)
 })
 
 function addToFav(productId){
@@ -76,7 +79,7 @@ function addToFav(productId){
         dataArray.push(String(productId));
         localStorage.setItem('fav-product-id', JSON.stringify(dataArray));
     }
-    fetchDataAndShowResult();
+    showData();
 }
 
 function removeFromFav(productId){
@@ -89,5 +92,5 @@ function removeFromFav(productId){
         }
         localStorage.setItem('fav-product-id', JSON.stringify(dataArray));
     }
-    fetchDataAndShowResult();
+    showData();
 }
