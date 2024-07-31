@@ -1,0 +1,103 @@
+body{
+    /* margin: 20px; */
+    background-color: #202124;
+    color: #fff;
+}
+.header {
+    display: block;
+    gap: 20px;
+    margin: 20px;
+    padding-top: 10px;
+}
+.leftItems{
+    display: flex;
+    float: left;
+    gap: 20px;
+}
+.rightItems{
+    display: flex;
+    float: right;
+    gap: 20px;
+}
+.rightItems span, .leftItems span{
+    margin-top: 15px;
+}
+.profile-icon{
+    border-radius: 50px;
+}
+.google-img{
+    padding-top: 6%;
+    text-align: center;
+}
+.input-search{
+    padding-top: 50px;
+    text-align: center;
+}
+.search-input{
+    text-align: center;
+    width: 32%;
+    height: 45px;
+    background-color: #202124;
+    border: 1px solid gray;
+    border-radius: 25px;
+}
+svg.search {
+    height: 22px;
+    position: absolute;
+    margin-left: -560px;
+    margin-top: 13px;
+}
+svg.goxjub {
+    height: 22px;
+    position: absolute;
+    margin-left: -77px;
+    margin-top: 13px;
+}
+svg.Gdd5U {
+    height: 22px;
+    position: absolute;
+    margin-left: -37px;
+    margin-top: 13px;
+}
+.buttons{
+    text-align: center;
+    margin-top: 30px;
+}
+button {
+    height: 35px;
+    margin: 10px;
+    width: 9%;
+    background-color: #303134;
+    color: white;
+    border-radius: 8px;
+    border-style: hidden;
+}
+.footer {
+    background-color: #171717;
+    margin-top: 14% !important;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+.footer-region {
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+hr {
+    width: 96%;
+    border: .5px solid dimgrey;
+}
+.footer-options{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.option-right {
+    float: right;
+    padding-right: 40px;
+    
+}
+.option-left {
+    float: left;
+    padding-left: 40px;
+    
+}

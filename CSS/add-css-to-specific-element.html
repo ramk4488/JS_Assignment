@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested CSS</title>
+    <style>
+      /*   .box .item {
+        color: tomato;
+      } */
+
+      .box .nav > .item {
+        color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="nav">
+        <ul class="list">
+          <li class="item">Hello</li>
+          <li class="item">Hello</li>
+          <li class="item">Hello</li>
+          <li class="item">Hello</li>
+          <li class="item">Hello</li>
+        </ul>
+        <ul class="list2">
+          <li class="item">Hello</li>
+          <li class="item">Hello</li>
+          <li class="item">Hello</li>
+          <li class="item">Hello</li>
+          <li class="item">Hello</li>
+        </ul>
+        <p class="item">Para Item</p>
+      </div>
+    </div>
+  </body>
+</html>
